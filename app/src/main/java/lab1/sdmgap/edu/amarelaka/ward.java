@@ -81,6 +81,8 @@ public class ward extends Fragment {
             wardDataModel.setWard_police_station_number(policeStationNumber[i]);
             wardDataModel.setWard_img(ward_image[i]);
             ward.add(wardDataModel);
+
+
         }
         return ward;
     }
