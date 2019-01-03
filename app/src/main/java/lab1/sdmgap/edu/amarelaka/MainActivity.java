@@ -23,33 +23,6 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    private final String policeStation[] = {
-            "Gulshan",
-            "Mohakhali",
-            "Banani",
-            "Korail"
-    };
-
-    private final String policeStationNumber[] = {
-            "01677006082",
-            "01515209606",
-            "01715533712",
-            "01720278202"
-    };
-
-    private final String fireServiceNumber[] = {
-            "01977006082",
-            "01315209606",
-            "01215533712",
-            "01420278202"
-    };
-
-    private final String ward_image[] = {
-            "https://vignette2.wikia.nocookie.net/peridot0/images/2/28/Pink_frosted_sprinkled_donut.png",
-            "http://vignette4.wikia.nocookie.net/logopedia/images/d/d8/Andorid-2.3-Gingerbread-logo.png",
-            "http://www.pngmart.com/files/4/Android-PNG-Photos.png",
-            "http://goodereader.com/blog/uploads/images/android-froyo.png"
-    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -154,28 +127,6 @@ public class MainActivity extends AppCompatActivity
         return true;
     }
 
-    private void initViews(){
-        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.wardRecycleView);
-                recyclerView.setHasFixedSize(true);
-        RecyclerView.LayoutManager layoutManager = new GridLayoutManager(getApplicationContext(),2);
-        recyclerView.setLayoutManager(layoutManager);
-
-        ArrayList ward1 = prepareData();
-        CustomAdapter adapter = new CustomAdapter(getApplicationContext(),ward1);
-        recyclerView.setAdapter(adapter);
-
-    }
-
-    private ArrayList prepareData(){
-        ArrayList ward = new ArrayList<>();
-        for(int i=0;i<policeStation.length;i++){
-            WardDataModel wardDataModel = new WardDataModel();
-            wardDataModel.setWard_police_station_name(policeStation[i]);
-            wardDataModel.setWard_img(ward_image[i]);
-            ward.add(wardDataModel);
-        }
-        return ward;
-    }
 
 
 }

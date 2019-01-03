@@ -37,9 +37,9 @@ public class ward extends Fragment {
     };
 
     private final String ward_image[] = {
-            "https://vignette2.wikia.nocookie.net/peridot0/images/2/28/Pink_frosted_sprinkled_donut.png",
+            "https://d30fl32nd2baj9.cloudfront.net/media/2015/10/13/gulshan-thana.jpg/ALTERNATES/w300/Gulshan+Thana.jpg",
             "http://vignette4.wikia.nocookie.net/logopedia/images/d/d8/Andorid-2.3-Gingerbread-logo.png",
-            "http://www.pngmart.com/files/4/Android-PNG-Photos.png",
+            "https://lh3.googleusercontent.com/p/AF1QipNPAg8RORum9Gm25w0gR2Ow1xJW0OQsty0V5qzC=s1600-w400",
             "http://goodereader.com/blog/uploads/images/android-froyo.png"
     };
 
