@@ -1,5 +1,6 @@
 package lab1.sdmgap.edu.amarelaka;
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -32,11 +33,31 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
     }
 
     @Override
-    public void onBindViewHolder(ViewHolder holder, int position) {
+    public void onBindViewHolder(ViewHolder holder, final int position) {
         holder.police_station_name.setText(ward.get(position).getWard_police_station_name());
         holder.police_station_number.setText(ward.get(position).getWard_police_station_number());
         holder.fire_service_number.setText(ward.get(position).getWard_fireService());
         Picasso.with(context).load(ward.get(position).getWard_img()).resize(150,150).into(holder.ward_image);
+
+
+        holder.police_station_name.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent =new Intent(context,AboutDetails.class);
+
+                intent.putExtra("PoliceStationName", ward.get(position).getWard_police_station_name());
+
+
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                context.startActivity(intent);
+
+
+
+            }
+        });
+
+
     }
 
     @Override

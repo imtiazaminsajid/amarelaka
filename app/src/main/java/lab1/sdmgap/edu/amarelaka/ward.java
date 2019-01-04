@@ -83,7 +83,12 @@ public class ward extends Fragment {
             ward.add(wardDataModel);
 
 
+
+
         }
+
+
         return ward;
     }
+
 }
